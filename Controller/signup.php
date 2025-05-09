@@ -1,3 +1,12 @@
+<?php
+require_once __DIR__ . '/../config/database.php';
+require_once 'Database.php';
+
+$error = '';
+$email = '';
+$username = '';
+$password = '';
+$confirmPassword = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = $_POST['email'] ?? '';
@@ -5,7 +14,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $password = $_POST['password'] ?? '';
     $confirmPassword = $_POST['confirm_password'] ?? '';
 
-    // ─────────────── Validate Inputs ───────────────
     if (!$email || !$username || !$password || !$confirmPassword) {
         $error = 'All fields are required.';
     } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
@@ -13,11 +21,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     } elseif ($password !== $confirmPassword) {
         $error = 'Passwords do not match.';
     } else {
-        // ─────────────── Create New User ───────────────
         try {
             $db = new Database();
 
-            // Check if user exists
+            // Check if email or username already exists
             $db->query("SELECT id FROM users WHERE email = ? OR name = ?", [$email, $username]);
             $existingUser = $db->fetch();
 
@@ -34,9 +41,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 header('Location: /home');
                 exit();
             }
-
         } catch (Exception $e) {
             $error = 'Error: ' . $e->getMessage();
         }
     }
 }
+
+require __DIR__ . '/../View/auth/singUp.view.php';
