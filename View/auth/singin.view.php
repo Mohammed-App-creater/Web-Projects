@@ -18,6 +18,34 @@
         <!-- <img src="path/to/robot.png" alt="Robot" class="w-24 h-24" /> -->
     </div>
 
+    <?php if ($error): ?>
+        <div class="bg-red-500 text-white p-2 rounded mb-4 text-center text-sm">
+            <?= htmlspecialchars($error) ?>
+        </div>
+    <?php endif; ?>
+
+    <form method="POST"  class="flex flex-col space-y-4">
+        <input
+            type="text"
+            name="email"
+            placeholder="Email"
+            class="bg-gray-800 border border-gray-600 rounded px-4 py-2 text-white"
+            value="<?= htmlspecialchars($email) ?>"
+        />
+        <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            class="bg-gray-800 border border-gray-600 rounded px-4 py-2 text-white"
+        />
+        <button
+            type="submit"
+            class="bg-blue-600 hover:bg-blue-700 rounded py-2 font-semibold"
+        >
+            Sign In
+        </button>
+    </form>
+
     
 </div>
 </body>
