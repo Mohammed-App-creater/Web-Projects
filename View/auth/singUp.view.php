@@ -17,7 +17,62 @@
         <!-- <img src="path/to/robot.png" alt="Robot" class="w-24 h-24" /> -->
     </div>
 
-    
+    <?php if ($error): ?>
+        <div class="bg-red-500 text-white p-2 rounded mb-4 text-center text-sm">
+            <?= htmlspecialchars($error) ?>
+        </div>
+    <?php endif; ?>
+
+    <form method="POST" class="flex flex-col space-y-4">
+        <div class="flex items-center gap-2 bg-gray-800 rounded px-4 py-2">
+            <span></span>
+            <input
+                    type="text"
+                    name="username"
+                    placeholder="Username"
+                    class="bg-transparent outline-none text-white w-full"
+                    value="<?= htmlspecialchars($username) ?>"
+            />
+        </div>
+
+        <div class="flex items-center gap-2 bg-gray-800 rounded px-4 py-2">
+            <span>👤</span>
+            <input
+                    type="text"
+                    name="email"
+                    placeholder="Email"
+                    class="bg-transparent outline-none text-white w-full"
+                    value="<?= htmlspecialchars($email) ?>"
+            />
+        </div>
+
+        <div class="flex items-center gap-2 bg-gray-800 rounded px-4 py-2">
+            <span>🔒</span>
+            <input
+                    type="password"
+                    name="password"
+                    placeholder="Password"
+                    class="bg-transparent outline-none text-white w-full"
+            />
+        </div>
+
+        <div class="flex items-center gap-2 bg-gray-800 rounded px-4 py-2">
+            <span>🔒</span>
+            <input
+                    type="password"
+                    name="confirm_password"
+                    placeholder="Confirm Password"
+                    class="bg-transparent outline-none text-white w-full"
+            />
+        </div>
+
+        <button
+                type="submit"
+                class="bg-blue-600 hover:bg-blue-700 rounded py-2 font-semibold"
+        >
+            Sign Up
+        </button>
+    </form>
 
     
 </div>
