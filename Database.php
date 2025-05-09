@@ -19,4 +19,8 @@ class Database {
         $this->stmt = $this->pdo->prepare($sql);
         return $this->stmt->execute($params);
     }
+
+     public function fetchAll() {
+        return $this->stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
 }
