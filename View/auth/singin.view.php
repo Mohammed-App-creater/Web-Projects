@@ -46,6 +46,16 @@
         </button>
     </form>
 
+    <div class="text-center my-4 text-sm text-gray-400">
+        Or Sign In With
+    </div>
+
+    <div class="space-y-2">
+        <button class="w-full bg-gray-700 py-2 rounded hover:bg-gray-600">🍎 Sign in with Apple</button>
+        <button class="w-full bg-gray-700 py-2 rounded hover:bg-gray-600">🔍 Sign in with Google</button>
+        <button class="w-full bg-gray-700 py-2 rounded hover:bg-gray-600">🪟 Sign in with Microsoft</button>
+    </div>
+
     
 </div>
 </body>
