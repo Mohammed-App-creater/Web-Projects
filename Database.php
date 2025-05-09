@@ -14,4 +14,9 @@ class Database {
             die("DB Connection failed: " . $e->getMessage());
         }
     }
+
+     public function query($sql, $params = []) {
+        $this->stmt = $this->pdo->prepare($sql);
+        return $this->stmt->execute($params);
+    }
 }
