@@ -57,4 +57,9 @@ class Database {
         $this->query($sql, ['user_id' => $userId]);
         return $this->fetchAll();
     }
+
+     public function close() {
+        $this->stmt = null;
+        $this->pdo = null;
+    }
 }
