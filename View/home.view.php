@@ -118,6 +118,7 @@ require_once 'View/components/brainstorming.view.php';
         </section>
     </section>
 
+
     <section id="chatBox" class=" w-1/2  hidden -mt-8 mx-auto h-screen overflow-y-auto no-scrollbar">
         <ul id="chats" class="flex flex-col gap-6 p-4 overflow-y-auto no-scrollbar">
 
