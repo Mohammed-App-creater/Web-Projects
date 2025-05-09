@@ -61,8 +61,65 @@ require_once 'View/components/brainstorming.view.php';
     </div>
 </aside>
 
+<!-- Main Part -->
+<main class="flex flex-col w-full h-screen relative no-scrollbar">
+    <!-- Header -->
+    <header class="p-4 flex justify-start gap-4 items-center">
+        <button id="openSidebar" class="text-white text-2xl focus:outline-none">
+            ☰
+        </button>
+
+        <h1 class="text-2xl font-bold">ASTU ChatBot</h1>
+        <!-- Add drawer toggle or menu icon here if needed -->
+    </header>
+
+    <!-- Suggestions (Brainstorming) -->
+    <section class="px-4 overflow-y-auto no-scrollbar">
+        <!-- Greeting -->
+        <section id="greeting">
+            <section class="text-center px-4  mb-10">
+                <h2 class="text-3xl font-semibold mb-2">Hello, Ask Me Anything...</h2>
+            </section>
+            <?php
+            $ideas = [
+                [
+                    "icon" => '☀️',
+                    "idea1" => "Explain quantum computing in simple terms",
+                    "idea2" => "How do I make HTTP in JavaScript",
+                    "color" => "bg-purple-700"
+                ],
+                [
+                    "icon" => '💻',
+                    "idea1" => "What is an API?",
+                    "idea2" => "How to use async/await",
+                    "color" => "bg-blue-500"
+                ],
+                [
+                    "icon" => '🧠',
+                    "idea1" => "Basics of AI",
+                    "idea2" => "How machine learning works",
+                    "color" => "bg-pink-600"
+                ],
+            ];
+            echo "<div class='flex flex-col items-center gap-8 mb-10'>";
+            foreach ($ideas as $idea) {
+                $brainstorming = new Brainstorming(
+                    $idea['icon'],
+                    $idea['idea1'],
+                    $idea['idea2'],
+                    $idea['color']
+                );
+                    echo $brainstorming->render();
+            }
+            echo '</div>';
+            ?>
+            <!-- A div that pushes the main content up to not be covered by the footer -->
+            <div class="h-[200px]"></div>
+        </section>
+    </section>
 
 
+</main>
 
 </body>
 
