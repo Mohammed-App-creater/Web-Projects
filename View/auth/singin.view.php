@@ -56,7 +56,14 @@
         <button class="w-full bg-gray-700 py-2 rounded hover:bg-gray-600">🪟 Sign in with Microsoft</button>
     </div>
 
-    
+    <p class="text-center text-sm text-gray-300 mt-6">
+        Don't have an account?
+        <a href="/signup" class="text-white font-bold underline ml-1">Sign Up</a>
+    </p>
+
+    <div class="text-center mt-2">
+        <a href="/drawer.php" class="text-red-500 text-sm underline">Drawer</a>
+    </div>
 </div>
 </body>
 </html>
