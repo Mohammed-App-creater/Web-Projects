@@ -20,6 +20,14 @@ class User {
             if ($stmt->fetch()) {
                 return "Username already exists";
             }
+
+            // Hash the password
+            $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+
+            // Insert new user
+            $stmt = $this->pdo->prepare("INSERT INTO users (username, password) VALUES (?, ?)");
+            $stmt->execute([$username, $hashedPassword]);
+
             return true;
         } catch (PDOException $e) {
             return "Registration failed: " . $e->getMessage();
