@@ -74,7 +74,10 @@
         </button>
     </form>
 
-    
+    <p class="text-center text-sm text-gray-300 mt-6">
+        Already have an account?
+        <a href="/signin" class="text-white font-bold underline ml-1">Sign In</a>
+    </p>
 </div>
 </body>
 </html>
