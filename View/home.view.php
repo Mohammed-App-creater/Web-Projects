@@ -118,6 +118,55 @@ require_once 'View/components/brainstorming.view.php';
         </section>
     </section>
 
+    <section id="chatBox" class=" w-1/2  hidden -mt-8 mx-auto h-screen overflow-y-auto no-scrollbar">
+        <ul id="chats" class="flex flex-col gap-6 p-4 overflow-y-auto no-scrollbar">
+
+        </ul>
+        <!-- A div that pushes the main content up to not be covered by the footer -->
+        <div class="h-[200px]"></div>
+    </section>
+
+    <!-- Bottom Chat Bar -->
+    <!-- Add this to your global CSS or inside a <style> block -->
+    <footer class="w-[45%] max-w-4xl h-auto bg-black py-4 px-2 flex flex-col border border-gray-600  items-center gap-4 rounded-3xl absolute bottom-10 left-1/2 transform -translate-x-1/2">
+        <!-- Textarea (scrollbar hidden) -->
+        <textarea
+                id="dynamicInput"
+                class="w-full bg-transparent text-white px-4 py-2 outline-none placeholder-gray-100 max-h-[220px] overflow-y-auto resize-none no-scrollbar"
+                placeholder="Ask me anything..."
+        ></textarea>
+
+        <!-- Action Buttons -->
+        <div class="flex justify-between items-center w-full gap-4">
+            <div class="flex gap-4">
+                <!-- Star -->
+                <div class="flex items-center gap-2 border border-gray-600 px-4 py-2 rounded-full text-white">
+                    <img src="/icons/star.svg" alt="star" class="w-5 h-5"/>
+                    <span class="text-sm text-gray-300">Save</span>
+                </div>
+
+                <!-- Image -->
+                <div class="flex items-center gap-2 border border-gray-600 px-4 py-2 rounded-full text-white">
+                    <i class="text-lg">🖼️</i>
+                    <span class="text-sm text-gray-300">Image</span>
+                </div>
+
+                <!-- Mic -->
+                <div class="flex items-center gap-2 border border-gray-600 px-4 py-2 rounded-full text-white">
+                    <i class="text-lg">🎤</i>
+                    <span class="text-sm text-gray-300">Voice</span>
+                </div>
+            </div>
+
+            <!-- Send -->
+            <div onclick="askGemini()"
+                 class="flex items-center gap-2 border border-gray-600 px-4 py-2 rounded-full text-white pointer">
+                <i class="text-lg">📤</i>
+                <span class="text-sm text-gray-300 pointer ">Send</span>
+            </div>
+        </div>
+    </footer>
+
 
 </main>
 
