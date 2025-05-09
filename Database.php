@@ -31,4 +31,16 @@ class Database {
     public function lastInsertId() {
         return $this->pdo->lastInsertId();
     }
+
+    public function createChat($userId, $title = null) {
+        $sql = "INSERT INTO chats (user_id, title) VALUES (:user_id, :title)";
+        $this->query($sql, ['user_id' => $userId, 'title' => $title]);
+        return $this->lastInsertId();
+    }
+
+    public function getChatMessages($chatId) {
+        $sql = "SELECT * FROM chat_history WHERE chat_id = :chat_id ORDER BY created_at ASC";
+        $this->query($sql, ['chat_id' => $chatId]);
+        return $this->fetchAll();
+    }
 }
