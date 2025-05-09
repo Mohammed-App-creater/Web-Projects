@@ -43,4 +43,18 @@ class Database {
         $this->query($sql, ['chat_id' => $chatId]);
         return $this->fetchAll();
     }
+
+     public function saveMemory($userId, $key, $value) {
+        $sql = "INSERT INTO memory (user_id, `key`, value) VALUES (:user_id, :key, :value)
+            ON DUPLICATE KEY UPDATE value = :value";
+        $this->query($sql, ['user_id' => $userId, 'key' => $key, 'value' => $value]);
+    }
+
+    public function getUserChatSessions($userId) {
+        $sql = "SELECT * FROM chats 
+            WHERE user_id = :user_id 
+            ORDER BY updated_at DESC";
+        $this->query($sql, ['user_id' => $userId]);
+        return $this->fetchAll();
+    }
 }
