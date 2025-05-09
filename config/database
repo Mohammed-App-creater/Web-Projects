@@ -1,0 +1,9 @@
+<?php
+// db.config.php
+
+define('DB_HOST', 'localhost');
+define('DB_NAME', 'ASTUChatmeat');
+define('DB_USER', 'root');
+define('DB_PASS', '199605');
+
+?>
