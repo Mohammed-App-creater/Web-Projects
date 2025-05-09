@@ -43,6 +43,54 @@
             color: #95a5a6;
         }
 
+        .search-bar {
+        margin: 20px 0;
+    }
+
+    .search-bar input {
+        padding: 10px;
+        font-size: 16px;
+        border: 2px solid #34495e;
+        border-radius: 25px;
+        width: 70%;
+        max-width: 300px;
+        outline: none;
+        background: #2c3e50;
+        color: #e0e0e0;
+        transition: border-color 0.3s;
+    }
+
+    .search-bar input:focus {
+        border-color: #e74c3c;
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        margin: 10px;
+        font-size: 16px;
+        color: #fff;
+        background-color: #e74c3c;
+        text-decoration: none;
+        border-radius: 25px;
+        transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+        background-color: #c0392b;
+    }
+
+    .astronaut {
+        width: 150px;
+        margin: 20px auto;
+        animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-20px); }
+    }
+
 
         @media (max-width: 600px) {
             h1 { font-size: 48px; }
@@ -59,7 +107,30 @@
     <h2>Oops! Lost in Space?</h2>
     <p>The page you're looking for has vanished into a black hole or doesn't exist. Let's get you back on track!</p>
 
+    <!-- Astronaut Image (You can replace with your own image or use an SVG) -->
+    <img src="../assets/Astronomer.png" alt="Astronaut" class="astronaut">
+
+    <!-- Search Bar -->
+    <div class="search-bar">
+        <input type="text" placeholder="Search for something else...">
+    </div>
+
+    <!-- Navigation Links -->
+    <a href="/" class="btn">Back to Home</a>
+    <a href="/contact" class="btn">Contact Us</a>
 </div>
+
+<script>
+    // Optional: Add functionality to the search bar
+    document.querySelector('.search-bar input').addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            const query = e.target.value.trim();
+            if (query) {
+                window.location.href = `/search?q=${encodeURIComponent(query)}`;
+            }
+        }
+    });
+</script>
 
 </body>
 </html>
