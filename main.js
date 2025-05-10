@@ -44,3 +44,25 @@ function renderChats() {
         chats.appendChild(li);
     });
 }
+
+async function askGemini() {
+    const prompt = textarea.value || '';
+    if (!prompt.trim()) return;
+
+    Chats.push(`You: ${prompt}`);
+    textarea.value = "";
+    renderChats();
+
+    try {
+        const res = await fetch('/api/chat.php', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ prompt }),
+        });
+
+        
+    } catch (err) {
+        console.error(err);
+        textarea.value = 'Something went wrong. Please try again.';
+    }
+}
