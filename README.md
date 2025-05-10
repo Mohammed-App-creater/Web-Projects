@@ -89,7 +89,7 @@ Make sure the following requirements are met before proceeding:
     - Navigate to the `/signup` route to create a new user account.
 
 2. **Login**:
-    - Navigate to the `/signin` route to log in.
+    - Navigate to the `https://github.com/Mohammed-App-creater/Web-Projects/blob/master/assets/signIn.png` route to log in.
 
 3. **Chat**:
     - Once logged in, navigate to `/chat`.
