@@ -153,5 +153,24 @@ AstuChatMeat/
 
 ---
 
+## Contributing
+
+We welcome contributions to improve the project. If you identify any issues or areas for enhancement, feel free to submit a pull request or open an issue.
+
+### Steps to Contribute
+1. Fork the repository.
+2. Make the necessary changes.
+3. Submit a pull request with a detailed explanation.
+
+---
+
+## License
+
+AstuChatMeat is licensed under [MIT License](https://opensource.org/licenses/MIT).
+
+Feel free to use, modify, and distribute the code in this project.
+
+---
+
 
 
