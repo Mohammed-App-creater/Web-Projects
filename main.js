@@ -13,3 +13,8 @@ toggleBtn?.addEventListener('click', () => {
 openSidebarBtn?.addEventListener('click', () => {
     sidebar.classList.remove('-translate-x-full');
 });
+
+textarea?.addEventListener('input', () => {
+    textarea.style.height = 'auto';
+    textarea.style.height = `${Math.min(textarea.scrollHeight, 500)}px`;
+});
