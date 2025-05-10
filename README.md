@@ -83,7 +83,7 @@ Make sure the following requirements are met before proceeding:
 ![Chat Interface Screenshot](https://github.com/Mohammed-App-creater/Web-Projects/blob/Mohammed/assets/sideBar.png)
 
 ### Brainstorming Display
-![Brainstorming Display Screenshot](assets/screenshot-brainstorming.png)
+![Brainstorming Display Screenshot](https://github.com/Mohammed-App-creater/Web-Projects/blob/Mohammed/assets/Breanstorming.png)
 
 *(You can replace the `src` of the above images with the actual online links when available.)*
 
