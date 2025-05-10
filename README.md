@@ -77,7 +77,7 @@ Make sure the following requirements are met before proceeding:
 ![SignUpPage Screenshot](http://github.com/Mohammed-App-creater/Web-Projects/blob/master/assets/signUp.png)
 
 ### Homepage
-![Homepage Screenshot](assets/screenshot-homepage.png)
+![Homepage Screenshot](https://github.com/Mohammed-App-creater/Web-Projects/blob/Mohammed/assets/home.png)
 
 ### Chat Interface
 ![Chat Interface Screenshot](assets/screenshot-chat.png)
