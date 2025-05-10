@@ -77,15 +77,14 @@ Make sure the following requirements are met before proceeding:
 ![SignUpPage Screenshot](http://github.com/Mohammed-App-creater/Web-Projects/blob/master/assets/signUp.png)
 
 ### Homepage
-![Homepage Screenshot](assets/screenshot-homepage.png)
+![Homepage Screenshot](https://github.com/Mohammed-App-creater/Web-Projects/blob/Mohammed/assets/home.png)
 
 ### Chat Interface
-![Chat Interface Screenshot](assets/screenshot-chat.png)
+![Chat Interface Screenshot](https://github.com/Mohammed-App-creater/Web-Projects/blob/Mohammed/assets/sideBar.png)
 
 ### Brainstorming Display
-![Brainstorming Display Screenshot](assets/screenshot-brainstorming.png)
+![Brainstorming Display Screenshot](https://github.com/Mohammed-App-creater/Web-Projects/blob/Mohammed/assets/Breanstorming.png)
 
-*(You can replace the `src` of the above images with the actual online links when available.)*
 
 ---
 
