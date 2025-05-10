@@ -70,6 +70,12 @@ Make sure the following requirements are met before proceeding:
 
 ## Screenshots
 
+## SignInPage
+![SignInPage Screenshot](https://github.com/Mohammed-App-creater/Web-Projects/blob/master/assets/signIn.png)
+
+## SignUpPage
+![SignUpPage Screenshot](http://github.com/Mohammed-App-creater/Web-Projects/blob/master/assets/signUp.png)
+
 ### Homepage
 ![Homepage Screenshot](assets/screenshot-homepage.png)
 
