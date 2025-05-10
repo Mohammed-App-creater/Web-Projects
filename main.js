@@ -60,7 +60,18 @@ async function askGemini() {
             body: JSON.stringify({ prompt }),
         });
 
-        
+        if (!res.ok) {
+            throw new Error(`Server error: ${res.status}`);
+        }
+
+        const data = await res.json();
+        const reply = data?.response ?? 'No response';
+
+        Chats.push(`ASTU: ${reply}`);
+        renderChats();
+
+        textarea.value = '';
+        textarea.style.height = 'auto';
     } catch (err) {
         console.error(err);
         textarea.value = 'Something went wrong. Please try again.';
