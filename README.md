@@ -172,5 +172,11 @@ Feel free to use, modify, and distribute the code in this project.
 
 ---
 
+## Contact
 
+For inquiries or further information about the project:
+- Email: [support@astuchatmeat.com](mailto:support@astuchatmeat.com)
+- Website: [https://astuchatmeat.com](https://astuchatmeat.com)
+
+---
 
