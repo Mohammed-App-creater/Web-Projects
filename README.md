@@ -80,7 +80,7 @@ Make sure the following requirements are met before proceeding:
 ![Homepage Screenshot](https://github.com/Mohammed-App-creater/Web-Projects/blob/Mohammed/assets/home.png)
 
 ### Chat Interface
-![Chat Interface Screenshot](assets/screenshot-chat.png)
+![Chat Interface Screenshot](https://github.com/Mohammed-App-creater/Web-Projects/blob/Mohammed/assets/sideBar.png)
 
 ### Brainstorming Display
 ![Brainstorming Display Screenshot](assets/screenshot-brainstorming.png)
