@@ -83,4 +83,22 @@ Make sure the following requirements are met before proceeding:
 
 ---
 
+## Usage
+
+1. **Registration**:
+    - Navigate to the `/signup` route to create a new user account.
+
+2. **Login**:
+    - Navigate to the `/signin` route to log in.
+
+3. **Chat**:
+    - Once logged in, navigate to `/chat`.
+    - Enter text prompts in the chat box and interact with the chatbot.
+
+4. **Brainstorming Component**:
+    - Visit `/home` to see brainstorming ideas rendered with visuals and dynamic components.
+
+---
+
+
 
