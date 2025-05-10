@@ -26,3 +26,21 @@ textarea?.addEventListener('keydown', (event) => {
         askGemini();
     }
 });
+
+const Chats = [];
+
+function renderChats() {
+    chats.innerHTML = ''; // Clear existing content
+
+    if (Chats.length > 0) {
+        Greetings?.classList.add('hidden');
+        ChatBox?.classList.remove('hidden');
+    }
+
+    Chats.forEach(chat => {
+        const li = document.createElement('li');
+        li.className = 'bg-[#1f2937] p-2 tracking-wider leading-10 rounded-md py-4 px-8';
+        li.textContent = chat;
+        chats.appendChild(li);
+    });
+}
