@@ -100,5 +100,58 @@ Make sure the following requirements are met before proceeding:
 
 ---
 
+## File Structure
+
+```plaintext
+AstuChatMeat/
+├── api/
+│   ├── chat.php           # Backend endpoint for chatbot responses
+│   ├── gemini-caller.php  # Integration with Gemini API
+├── assets/                # Contains screenshots, icons, and static assets
+├── Controller/
+│   ├── home.php           # Controller for the homepage
+│   ├── signup.php         # Controller for user registration
+│   └── signin.php         # Controller for user login
+├── View/
+│   ├── 404.view.php       # View for 404 errors
+│   └── brainstorming.view.php  # Brainstorming idea rendering view
+├── config/
+│   └── database.php       # Configuration file for database connection
+├── core/
+│   ├── User.php           # Class for user authentication and registration
+│   ├── Database.php       # Database abstraction class
+├── public/
+│   ├── main.css           # Tailwind CSS for styling
+│   ├── main.js            # JavaScript for frontend logic
+├── route.php              # Application routing logic
+└── index.php              # Entry point of the web application
+```
+
+---
+
+## Technical Highlights
+
+### Backend
+- Built with PHP, following modular design principles
+- Uses PDO for secure database interaction
+- Stateless and session-driven architecture
+
+### Frontend
+- Styled using [Tailwind CSS](https://tailwindcss.com)
+- Responsive and dynamic UI for chat functionality and brainstorming
+- Auto-resizable text input for better usability
+
+### API Integration
+- Communicates with Gemini API to process user queries
+- Asynchronous operations with `fetch` in `main.js`
+
+### Database
+- Designed with normalized tables for:
+    - User account management
+    - Tracking chat sessions and history
+    - Maintaining user-specific memory
+
+---
+
 
 
