@@ -27,3 +27,60 @@
 
 ---
 
+## Installation
+
+### 1. Prerequisites
+Make sure the following requirements are met before proceeding:
+- PHP ≥ 7.0
+- MySQL database
+- Composer dependency manager installed
+
+### 2. Setup Steps
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-repo/AstuChatMeat.git
+   cd AstuChatMeat
+   ```
+2. Create a `.env` file to store database credentials:
+   ```plaintext
+   DB_HOST=your-db-host
+   DB_NAME=your-db-name
+   DB_USER=your-db-user
+   DB_PASS=your-db-password
+   ```
+3. Import the database schema:
+    - Use `database.sql` (if provided) or create the following tables manually:
+        - **users**
+        - **chats**
+        - **chat_history**
+        - **memory**
+
+4. Install dependencies with Composer:
+   ```bash
+   composer install
+   ```
+
+5. Start a local development server:
+   ```bash
+   php -S localhost:8000
+   ```
+6. Access the application at [http://localhost:8000](http://localhost:8000).
+
+---
+
+## Screenshots
+
+### Homepage
+![Homepage Screenshot](assets/screenshot-homepage.png)
+
+### Chat Interface
+![Chat Interface Screenshot](assets/screenshot-chat.png)
+
+### Brainstorming Display
+![Brainstorming Display Screenshot](assets/screenshot-brainstorming.png)
+
+*(You can replace the `src` of the above images with the actual online links when available.)*
+
+---
+
+
