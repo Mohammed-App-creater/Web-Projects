@@ -9,3 +9,7 @@ const ChatBox = document.getElementById('chatBox');
 toggleBtn?.addEventListener('click', () => {
     sidebar.classList.add('-translate-x-full');
 });
+
+openSidebarBtn?.addEventListener('click', () => {
+    sidebar.classList.remove('-translate-x-full');
+});
