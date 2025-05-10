@@ -18,3 +18,11 @@ textarea?.addEventListener('input', () => {
     textarea.style.height = 'auto';
     textarea.style.height = `${Math.min(textarea.scrollHeight, 500)}px`;
 });
+
+// Add Enter key event listener
+textarea?.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter' && !event.shiftKey && textarea.value.trim()) {
+        event.preventDefault();
+        askGemini();
+    }
+});
