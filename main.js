@@ -6,3 +6,6 @@ const Greetings = document.getElementById('greeting');
 const chats = document.getElementById('chats');
 const ChatBox = document.getElementById('chatBox');
 
+toggleBtn?.addEventListener('click', () => {
+    sidebar.classList.add('-translate-x-full');
+});
